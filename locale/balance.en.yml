@@ -1,0 +1,12 @@
+en:
+  screenshot_conflict: This screenshot looks like multiple different accounts, which one of these accounts is it?
+  screenshot_unknown: This screenshot doesn't look like any i've seen before. Perhaps you want to use /manage ?
+  balance_updated:
+    one: |
+      Updated the balance of *%{count}* account.
+
+      %{accounts}
+    many: |
+      Updated the balances of *%{count}* accounts.
+
+      %{accounts}

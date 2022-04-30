@@ -1,0 +1,33 @@
+en:
+  confirm: Confirm
+  cancel: Cancel
+  operation_canceled: Operation has been cancelled.
+  collection_none: None of these
+  firefly_no_connect: "I was not able to connect to your Firefly III instance. Reason: \"%{reason}\""
+
+  welcome: |
+    *Welcome to Firefly screenshot import bot:*
+
+  menu: |
+    Welcome to management menu:
+
+    *Reset* - Resets/wipes all accounts entered into system.
+    *Delete* - Deletes an account you choose.
+    *Delete Relationship* - Deletes all accounts under a particular relationship.
+    *Update* - Updates an account by asking you to submit a new screenshot.
+    *List* - Lists all accounts registered in system.
+    *Raw* - Shows your user JSON file contents.
+
+  help: |
+    This bot connects to your FireflyIII instance and accepts screenshots from financial apps that do not directly support data importing from solutions like open banking.
+
+    If you have not already, you should configure `config.yml` to hook this bot up to your personal FireflyIII instance.
+
+    This bot supports the following commands:
+
+    *Account Management*
+    /setup - Register a FireflyIII asset account with the bot.
+    /manage - Reconfigure existing asset accounts registered with the bot.
+
+    *Other*
+    /help - Shows this message.

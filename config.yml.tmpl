@@ -1,0 +1,20 @@
+telegram:
+  token: {{ .Env.TELEGRAM_TOKEN }}
+
+firefly:
+  host: {{ default .Env.FIREFLY_BASE_URL "http://firefly" }}
+  access_token: {{ .Env.FIREFLY_TOKEN }}
+
+bot:
+  users: [{{ .Env.TELEGRAM_ALLOWED_USERS }}]
+  storage:
+    driver: yaml
+    path: {{ default .Env.BOT_STORAGE_PATH "/storage" }}
+  screenshots:
+    hash: {{ default .Env.BOT_SCREENSHOT_HASH_ALGO "colorhash" }}
+    threshold: {{ default .Env.BOT_SCREENSHOT_THRESHOLD "3" }}
+  balance:
+    description: {{ default .Env.BOT_BALANCE_DESC "Bot Balance Update" }}
+  logging:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level: INFO

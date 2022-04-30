@@ -1,0 +1,22 @@
+en:
+  which_account: I found these asset accounts, which one do you want to configure?
+  account_setup_begin: |
+    OK. Let's setup the account *%{name}*.
+    Can you send me a screenshot of the current balance?
+  example_no_balance: There's no balance in this image. Try again.
+  example_balance_found: I found the following balances, which one is for *%{name}*?
+  user_file_missing: Could not find user file, perhaps you need to run /start ?
+
+  relationship_opportunity: |-
+    The screenshot sent looks similar to the screenshots for these accounts, create relationship?
+    (This allows you to update multiple accounts with a single screenshot)
+
+  setup_confirm: |
+    *Confirm Setup*
+    Firefly account ID: `%{id}`
+    Firefly account name: %{name}
+    Screenshot budget X detect: `%{x}px`
+    Screenshot budget Y detect: `%{y}px`
+  setup_complete: This account configuration has been saved.
+  setup_canceled: This account configuration has been canceled.
+

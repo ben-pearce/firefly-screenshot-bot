@@ -1,0 +1,28 @@
+diff --git a/firefly_iii_client/model/account.py b/firefly_iii_client/model/account.py
+index b228cd1..59962de 100644
+--- a/firefly_iii_client/model/account.py
++++ b/firefly_iii_client/model/account.py
+@@ -91,6 +91,7 @@ class Account(ModelNormal):
+             'NULL': "null",
+         },
+         ('liability_direction',): {
++            'None': None,
+             'CREDIT': "credit",
+             'DEBIT': "debit",
+         },
+@@ -141,13 +142,13 @@ class Account(ModelNormal):
+             'currency_symbol': (str,),  # noqa: E501
+             'current_balance': (str,),  # noqa: E501
+             'current_balance_date': (datetime,),  # noqa: E501
+-            'current_debt': (str,),  # noqa: E501
++            'current_debt': (str, none_type,),  # noqa: E501
+             'iban': (str, none_type,),  # noqa: E501
+             'include_net_worth': (bool,),  # noqa: E501
+             'interest': (str, none_type,),  # noqa: E501
+             'interest_period': (str, none_type,),  # noqa: E501
+             'latitude': (float, none_type,),  # noqa: E501
+-            'liability_direction': (str,),  # noqa: E501
++            'liability_direction': (str, none_type,),  # noqa: E501
+             'liability_type': (str, none_type,),  # noqa: E501
+             'longitude': (float, none_type,),  # noqa: E501
+             'monthly_payment_date': (datetime, none_type,),  # noqa: E501

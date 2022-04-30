@@ -1,0 +1,11 @@
+en:
+  account_reset: Your account has been reset.
+  no_accounts: No accounts registered. /setup
+
+  choose_relationship_delete: Which relationship do you want to delete?
+  relationship_accounts_deleted:
+    one: Deleted the account which was part of group %{group}.
+    many: Deleted the %{count} accounts which were part of group %{group}.
+
+  choose_delete: Which account do you want to delete?
+  account_deleted: Account %{id}:%{name} deleted.
