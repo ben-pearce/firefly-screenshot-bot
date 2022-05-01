@@ -59,7 +59,7 @@ docker run -d \
 | Variable | Function
 | :----: | --- 
 | `TELEGRAM_TOKEN` | Telegram bot token.
-| `FIREFLY_BASE_URL` | The base URL wher your FireflyIII API is accessible.
+| `FIREFLY_BASE_URL` | The base URL where your FireflyIII API is accessible.
 | `FIREFLY_TOKEN` | FireflyIII API Token.
 | `TELEGRAM_ALLOWED_USERS` | Comma-separated list of Telegram user IDs to restrict access.
 | `BOT_STORAGE_PATH` | Storage path of bot user data.
@@ -93,8 +93,8 @@ Eventually I'd like the bot to be able to scan a list of transactions from an im
 
 **What are relationships?**
 
-When you register an asset account and the bot sees the screenshot for the new account is similar to one for another account, it will ask if you want to create a relationship. If you set the account up as a relationship with another, it will assume both account balances can be seen from the same screenshot, and update both at once from a single screenshot when you next come to update the balance next time around.
+When you register an asset account and the bot sees the screenshot for the new account is similar to one for another account, it will ask if you want to create a relationship. If you set the account up as a relationship with another, it will assume both account balances can be seen from the same screenshot, and update both at once from a single screenshot when you come to update the balance next time around.
 
 **Can I manipulate the Firefly transaction the bot creates (i.e. Description, Type etc)?**
 
-The bot creates a transaction with the destination account set and a desciption which is configurable but is by default set as "Bot Balance Update". You may then use [FireflyIII's automation rules](https://docs.firefly-iii.org/firefly-iii/pages-and-features/rules/) to manipulate transactions further. :)
+The bot creates a transaction with the destination account set and a description which is configurable but is by default set as "Bot Balance Update". You may then use [FireflyIII's automation rules](https://docs.firefly-iii.org/firefly-iii/pages-and-features/rules/) to manipulate transactions further. :)
