@@ -42,7 +42,9 @@ def _update_firefly_balance(account_id: int, balance: float) -> float:
                         date=datetime.datetime.now(),
                         description=config.get('bot').get('balance').get('description'),
                         destination_id=None if balance_difference < 0 else str(account_id),
+                        destination_name='(bot balance adjustment)' if balance_difference < 0 else None,
                         source_id=str(account_id) if balance_difference < 0 else None,
+                        source_name=None if balance_difference < 0 else '(bot balance adjustment)',
                         type="withdrawal" if balance_difference < 0 else "deposit"
                     )
                 ]
