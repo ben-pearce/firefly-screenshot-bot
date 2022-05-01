@@ -51,10 +51,12 @@ def _get_nearest_balance_from_screenshot(screenshot: IOBase, x: int, y: int):
 
 def _get_balances_from_screenshot(screenshot: IOBase) -> Iterable[Balance]:
     np_bytes = np.asarray(bytearray(screenshot.read()), dtype=np.uint8)
-    img = cv.imdecode(np_bytes, cv.IMREAD_COLOR)
-    img_rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+    img = cv.imdecode(np_bytes, cv.IMREAD_GRAYSCALE)
 
-    screenshot_data = pytesseract.image_to_data(img_rgb, config='--psm 12', output_type=pytesseract.Output.DICT)
+    img_scaled = cv.resize(img, None, fx=2, fy=2)
+    ret1, th1 = cv.threshold(img_scaled, 0, 255, cv.THRESH_BINARY_INV + cv.THRESH_OTSU)
+    screenshot_data = pytesseract.image_to_data(th1, config='--psm 11', output_type=pytesseract.Output.DICT)
+
     prices = [Price.fromstring(s) for s in screenshot_data.get('text')]
     potential_balances = [
         Balance(
