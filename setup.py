@@ -2,7 +2,7 @@ import setuptools as setuptools
 
 setuptools.setup(
     name='firefly_screenshot_bot',
-    version='0.0.1',
+    version='0.0.2',
     author='Ben Pearce',
     author_email='ben.pearce@sky.com',
     description='Telegram bot for importing screenshots into FireflyIII',
