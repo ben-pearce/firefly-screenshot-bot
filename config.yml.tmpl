@@ -3,7 +3,8 @@ telegram:
 
 firefly:
   host: {{ default .Env.FIREFLY_BASE_URL "http://firefly" }}
-  access_token: {{ .Env.FIREFLY_TOKEN }}
+  access_token: {{ .Env.FIREFLY_TOKEN "" }}
+  access_token_file: {{ .Env.FIREFLY_TOKEN_FILE "" }}
 
 bot:
   users: [{{ .Env.TELEGRAM_ALLOWED_USERS }}]

@@ -13,6 +13,16 @@ i18n.load_path.append(os.path.join(pathlib.Path(__file__).parent.resolve(), '../
 
 logging.basicConfig(**config.get('bot').get('logging'))
 
+ff = config.get('firefly')
+
+if ff.get('access_token_file'):
+    with open(ff.get('access_token_file'), 'r') as f:
+        token = f.read()
+    
+    ff['access_token'] = token
+
+ff.pop('access_token_file')
+
 ff_configuration = firefly_iii_client.Configuration(
-    **config.get('firefly')
+    **ff
 )
